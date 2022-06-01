@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2 class="sub-title">Contact</h2>
+    <div class="description-margin">
+        <div class="description">
+            <p class="contact-item">Adresa</p>
+            Strada Cosmin Stoica, Nr. 4, <br> Bistrița, jud. Bistrița-Năsăud, România
+        </div>
+        <div class="description">
+            <p class="contact-item">Telefon</p>
+            0712 345 678
+        </div>
+        <div class="description">
+            <p class="contact-item">Email</p>
+            office@magicinstal.ro
+        </div>
+    </div>
+
+    <div class="form-detail-left">
+        <input type="text" id="name" class="form-detail" placeholder="Nume" autocomplete="off">
+        <div id="name-message" class="message">Campul este obligatoriu</div>
+    </div>
+    <div class="form-detail-right">
+        <input type="email" id="email" class="form-detail" placeholder="Email" autocomplete="off">
+        <div id="email-message" class="message">Campul este obligatoriu</div>
+    </div>
+    <div class="form-detail-bottom description-margin">
+        <textarea id="text" class="form-detail" rows="5" placeholder="Message"></textarea>
+        <div id="text-message" class="message">Campul este obligatoriu</div>
+        <input type="button" onclick="valideaza()" value="Trimite">
+    </div>
+{% endblock content %}

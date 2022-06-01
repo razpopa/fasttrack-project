@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F8FE;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #1e2dbe;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: #FFF;
+    padding: 2em;
+}
+
+menu {
+    padding: 0;
+    margin: 0 0 -4.8em 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content, .container {
+    margin: 0 auto;
+    min-width: 39em;
+    max-width: 70em;
+    width: 80%;
+}
+
+.home-image {
+    display: block;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 48.43em;
+}
+
+.title {
+    font-size: 48px;
+    color: #F0F8FE;
+    margin: 0;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 2em;
+    color: #708090;
+    margin: 0 0 0.7em 0;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+    color: #708090;
+    line-height: 1.7;
+}
+
+.description-margin, .form-container {
+    margin: 0 0 2em 0;
+}
+
+.flow-normal, .flow-reverse {
+    display: flex;
+    padding: 0 0 3em 0;
+}
+
+.flow-reverse {
+    flex-direction: row-reverse;
+}
+
+.right-align {
+    margin-right: 2em;
+    text-align: right;
+}
+
+.link {
+    width: 7em;
+    padding: 1em;
+    background-color: #1e2dbe;
+    border: 1px solid #F0F8FE;
+    color: #F0F8FE;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.link:hover {
+    background-color: #505FF0; /* #4655E6; */
+}
+
+img.contain {
+    object-fit: contain;
+}
+
+.contact-item {
+    color: #0C1C2C;
+    font-weight: bold;
+    margin: 1em 0 0.2em 0;
+}
+
+input.form-detail, textarea {
+    border: 1px solid #708090;
+    color: #708090;
+    font-size: 15px;
+    padding: 0.8em;
+    width: 100%;
+}
+
+.form-detail-left, .form-detail-right {
+    width: calc(50% - 1em);
+}
+
+.form-detail-left {
+    float: left;
+}
+
+.form-detail-right {
+    float: right;
+}
+.form-detail-bottom {
+    text-align: center;
+}
+
+.message {
+    color: #E33;
+    margin: 0.3em 0 0.7em 0;
+    visibility: hidden;
+}
+
+input[type="button"] {
+    width: 7em;
+    padding: 0.2em 1em;
+}
