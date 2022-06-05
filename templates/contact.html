@@ -12,21 +12,23 @@
         </div>
         <div class="description">
             <p class="contact-item">Email</p>
-            office@magicinstal.ro
+            office@realinstal.ro
         </div>
     </div>
 
-    <div class="form-detail-left">
-        <input type="text" id="name" class="form-detail" placeholder="Nume" autocomplete="off">
-        <div id="name-message" class="message">Campul este obligatoriu</div>
-    </div>
-    <div class="form-detail-right">
-        <input type="email" id="email" class="form-detail" placeholder="Email" autocomplete="off">
-        <div id="email-message" class="message">Campul este obligatoriu</div>
-    </div>
-    <div class="form-detail-bottom description-margin">
-        <textarea id="text" class="form-detail" rows="5" placeholder="Message"></textarea>
-        <div id="text-message" class="message">Campul este obligatoriu</div>
-        <input type="button" onclick="valideaza()" value="Trimite">
-    </div>
+    <form action="contact" method="GET">
+        <div class="form-detail-left">
+            <input type="text" id="name" class="form-detail" placeholder="Nume" autocomplete="off">
+            <div id="name-message" class="message">Campul este obligatoriu</div>
+        </div>
+        <div class="form-detail-right">
+            <input type="email" id="email" class="form-detail" placeholder="Email" autocomplete="off">
+            <div id="email-message" class="message">Campul este obligatoriu</div>
+        </div>
+        <div class="form-detail-bottom description-margin">
+            <textarea id="text" class="form-detail" rows="5" placeholder="Message"></textarea>
+            <div id="text-message" class="message">Campul este obligatoriu</div>
+            <input type="button" onclick="valideaza()" value="Trimite">
+        </div>
+    </form>
 {% endblock content %}
