@@ -145,9 +145,11 @@ input.form-detail, textarea {
 
 
 div.category-menu {
-    border: 1px solid #000000;
-    width: 10em;
+    display: inline-block;
+    width: 11em;
     height: 20em;
+    float: left;
+    border: 1px solid #000000;
 }
 
 div.category-title {
@@ -157,6 +159,20 @@ div.category-title {
 
 a:hover {
     background: #F0F8FE;
+}
+
+div.products-container {
+    width: auto;
+    overflow: hidden;
+}
+
+div.product {
+    display: inline-block;
+    width: 13em;
+    height: 20em;
+    margin: 0 0 1em 1em;
+    vertical-align: top;
+    border: 1px solid #1e2dbe;
 }
 
 input[type="button"] {

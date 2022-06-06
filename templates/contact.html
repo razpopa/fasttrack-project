@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <form action="contact" method="GET">
+    <form action="/www" >
         <div class="form-detail-left">
             <input type="text" id="name" class="form-detail" placeholder="Nume" autocomplete="off">
             <div id="name-message" class="message">Campul este obligatoriu</div>
@@ -28,7 +28,7 @@
         <div class="form-detail-bottom description-margin">
             <textarea id="text" class="form-detail" rows="5" placeholder="Message"></textarea>
             <div id="text-message" class="message">Campul este obligatoriu</div>
-            <input type="button" onclick="valideaza()" value="Trimite">
+            <input type="submit" onclick="valideaza()" value="Trimite">
         </div>
     </form>
 {% endblock content %}

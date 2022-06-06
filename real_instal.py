@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import data_layer.data_access as da
 
 app = Flask('Real Instal Webapp')
 
@@ -16,11 +17,23 @@ def get_acasa():
 
 @app.route('/produse/')
 def get_produse():
-	return render_template('produse.html')
+	products = da.get_all_products()
+	return render_template('products.html', products=products)
+
+
+@app.route('/produs/<int:product_id>')
+def get_produs(product_id):
+	product = da.get_product(product_id)
+	return render_template('product-details.html', product=product)
 
 
 @app.route('/contact/')
 def get_contact():
+	return render_template('contact.html')
+
+
+@app.route('/contact/sent')
+def send_message():
 	return render_template('contact.html')
 
 
@@ -44,6 +57,12 @@ def search():
 def get_categorie(category_id):
 
 	return render_template('search.html', category_id=category_id)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+	"""Catch inexistent routes"""
+	return render_template('errors/404.html')
 
 
 if __name__ == '__main__':

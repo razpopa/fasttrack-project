@@ -26,6 +26,12 @@
 
     {% include 'category.html' %}
 
-
+    <div class="products-container">
+        {% for p in products %}
+        <div class="product">
+            <a href="/produs/{{p[0]}}">{{p[1]}}</a>
+        </div>
+        {% endfor %}
+    </div>
 
 {% endblock content %}
