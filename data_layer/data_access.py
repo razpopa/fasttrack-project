@@ -27,7 +27,7 @@ def get_all_products():
     :return: List of tuples with products
     """
     with conn:
-        query = 'select id, name, price from product;'
+        query = 'select id, name, price, image_name from product;'
         c = conn.cursor()
         c.execute(query)
         records = c.fetchall()

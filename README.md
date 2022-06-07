@@ -11,6 +11,20 @@ de contact cu adresa, numarul de contact si o regiune pentru trimiterea diferite
 
 ## Tehnologii folosite
 
-Backend: PostgreSql, Python 3.10 cu dependinte la diferite librarii
+Backend: Python 3.10, Jinja2, psycopg2, PostgreSql 
 
 Frontend: HTML, CSS, JavaScript
+
+## Conditii prealabile
+
+Pentru a rula aplicatia e necesar sa fie instalate pe masina locala urmatoarele:
+
+Python 3.10, utilitar pentru dezvoltare - PyCharn sau Visual Studio Code
+
+PosgreSql 14, Manager de Baze de date - recomandat DBeaver,
+
+Browser - Chrome sau Mozilla Firefox
+
+Dupa instalarea Postgres, se creeaza baza de date cu numele realinstaldb.
+
+Apoi in DBeaver se deschide si se ruleaza scriptul din calea data_layer/database_initialization.sql

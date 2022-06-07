@@ -3,11 +3,6 @@ import data_layer.data_access as da
 
 app = Flask('Real Instal Webapp')
 
-prod = {
-	1: 'Chiuveta',
-	2: 'teava'
-}
-
 
 @app.route('/')
 @app.route('/desprenoi/')
@@ -18,7 +13,8 @@ def get_acasa():
 @app.route('/produse/')
 def get_produse():
 	products = da.get_all_products()
-	return render_template('products.html', products=products)
+	categories = da.get_categories()
+	return render_template('products.html', products=products, categories=categories)
 
 
 @app.route('/produs/<int:product_id>')
@@ -53,7 +49,7 @@ def search():
 	return render_template('search.html')
 
 
-@app.route('/produse/categorie/<int:category_id>')
+@app.route('/categorie/<int:category_id>')
 def get_categorie(category_id):
 
 	return render_template('search.html', category_id=category_id)

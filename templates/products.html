@@ -1,35 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-<!--    <h2 class="sub-title">Portofoliu</h2>-->
-<!--    <div class="flow-normal">-->
-<!--        <p class="description right-align">-->
-<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt-->
-<!--            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
-<!--            laboris nisi ut aliquip ex ea commodo consequat. </p>-->
-<!--        <img class="contain" src="{{ url_for('static', filename='gas.jpg') }}">-->
-<!--    </div>-->
-
-<!--    <div class="flow-reverse">-->
-<!--        <p class="description">-->
-<!--            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore-->
-<!--            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt-->
-<!--            in culpa qui officia deserunt mollit anim id est laborum.</p>-->
-<!--        <img class="contain right-align" src="{{ url_for('static', filename='water.jpg') }}">-->
-<!--    </div>-->
-
-<!--    <div class="flow-normal">-->
-<!--        <p class="description right-align">-->
-<!--            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,-->
-<!--            sed quia conse quuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>-->
-<!--        <img class="contain" src="{{ url_for('static', filename='water_gas.jpg') }}">-->
-<!--    </div>-->
-
-    {% include 'category.html' %}
+    <div class="category-menu">
+        <div class="category-title">Categorii</div>
+        {% for c in categories %}
+        <a href="/categorie/{{c[0]}}" class="category">
+            <div class="category">{{c[1]}}</div>
+        </a>
+        {% endfor %}
+    </div>
 
     <div class="products-container">
         {% for p in products %}
         <div class="product">
+            <img src="/static/images/{{p[3]}}" class="product-image">
             <a href="/produs/{{p[0]}}">{{p[1]}}</a>
+            <div class="price">Pret <span style="margin: 0 0.5em;">{{p[2]}}</span>lei</div>
+            <div class="link add-to-cart">Add to cart</div>
         </div>
         {% endfor %}
     </div>

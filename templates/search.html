@@ -1,5 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
-    <a href="/produse">Inapoi la produse</a>
+    <a href="/produse" class="link link-back">Inapoi la produse</a>
     <p>{{ category_id }}</p>
+    <div class="products-container">
+        {% for p in products %}
+        <div class="product">
+            <img src="/static/images/{{p[3]}}" class="product-image">
+            <a href="/produs/{{p[0]}}">{{p[1]}}</a>
+            <div class="price">Pret <span style="margin: 0 0.5em;">{{p[2]}}</span>lei</div>
+            <div class="link add-to-cart">Add to cart</div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
