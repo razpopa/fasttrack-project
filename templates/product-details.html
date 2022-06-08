@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-    <p>{{product[0]}}</p>
-    <p>{{product[1]}}</p>
+    <p></p>
+    <p></p>
+    <div class="product-detail">
+        <img src="/static/images/{{product[2]}}" class="product-detail-image">
+        <div>{{product[0]}}</div>
+        <div class="price">Pret <span style="margin: 0 0.5em;">{{product[1]}}</span>lei</div>
+        <div class="link add-to-cart">Add to cart</div>
+    </div>
 {% endblock content %}

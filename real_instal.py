@@ -40,24 +40,18 @@ def search():
 	else:
 		srch = request.args
 
-	# name = srch.get('name').lower()
-	# temp_st = {}
-	# for k, v in prod.items():
-	# 	if name in v.lower():
-	# 		temp_st[k] = v
-
 	return render_template('search.html')
 
 
 @app.route('/categorie/<int:category_id>')
 def get_categorie(category_id):
-
-	return render_template('search.html', category_id=category_id)
+	products = da.get_products(category_id)
+	return render_template('search.html', products=products)
 
 
 @app.errorhandler(404)
 def page_not_found(e):
-	"""Catch inexistent routes"""
+	"""Redirects the inexistent routes"""
 	return render_template('errors/404.html')
 
 

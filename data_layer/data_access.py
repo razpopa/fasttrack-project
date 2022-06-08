@@ -43,7 +43,7 @@ def get_products(category_id):
     """
     with conn:
         query = """
-            select id, name, description, price from product
+            select id, name, price, image_name from product
             where category_id = %s::integer;
         """
         c = conn.cursor()
@@ -61,7 +61,7 @@ def get_product(product_id):
     """
     with conn:
         query = """
-            select description, price from product
+            select description, price, image_name from product
             where id = %s::integer;
         """
         c = conn.cursor()

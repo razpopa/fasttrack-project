@@ -148,7 +148,7 @@ div.products-container {
     overflow: hidden;
 }
 
-div.product {
+div.product, div.product-detail {
     display: inline-block;
     width: 13em;
     height: 20em;
@@ -157,6 +157,17 @@ div.product {
     vertical-align: top;
     position: relative;
     border: 1px solid #1e2dbe;
+}
+
+div.product-detail {
+    width: 96%;
+    height: 35em;
+}
+
+img.product-detail-image {
+    width: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 img.product-image {
@@ -177,6 +188,7 @@ div.add-to-cart {
 
 a.link-back {
     width: 12em;
+    margin: 0 0 0 1em;
 }
 
 input[type="submit"] {
